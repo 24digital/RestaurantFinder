@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+gem 'haml' #gem used for enabling haml
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
@@ -45,8 +46,16 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 
+group :test do
+gem 'cucumber-rails',:require =>false
+gem 'cucumber-rails-training-wheels' #some pre-fabbed step definitions
+gem 'database_cleaner' #to clear Cucumber's test databse between runs
+gem 'capybara' #lets Cucumber pretend to be a web browser
+gem 'launchy' #a usefule debuggin aid for user stories
+gem 'rspec-rails'
+
+end
