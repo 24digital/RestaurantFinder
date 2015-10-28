@@ -48,6 +48,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem "erb2haml" #added by pman to convert existing erb to haml
+  gem 'haml-rails' #added by pman to convert existing erb to haml
 end
 
 group :test do
