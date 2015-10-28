@@ -19,7 +19,4 @@
     = environment
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
   = submit_tag 'Refresh', :id => 'environment_submit'
-  
-%p
 
-= @selected_environments[0]
