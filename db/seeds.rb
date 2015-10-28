@@ -9,13 +9,14 @@
 restaurants = [{:title => 'Oriental Garden', :cuisine => 'Sushi', :price_range => '$'},
                {:title => 'Peninsula Grill', :cuisine => 'Southern American', :price_range => '$$$'},
                {:title => 'Halls Chophouse', :cuisine => 'Steakhouse', :price_range => '$$$'},
+               {:title => 'Monza', :cuisine => 'Pizza', :price_range => '$'},
                {:title => 'EVO Pizzeria', :cuisine => 'Pizza', :price_range => '$'},
                {:title => 'McGrady', :cuisine => 'American', :price_range => '$$'},
                {:title => 'Red Drum Restaurant', :cuisine => 'Tex-Mex', :price_range => '$$'},
-               {:title => 'Coast Bar and Grill', :cuisine => 'Seafood', :price_range => '$$'},
-               {:title => 'Monza', :cuisine => 'Pizza', :price_range => '$'},
-               {:title => 'La Pizzeria', :cuisine => 'Italian', :price_range => '$'},
                {:title => 'Xiao Bao Biscuit', :cuisine => 'Asian', :price_range => '$'},
+               {:title => 'Coast Bar and Grill', :cuisine => 'Seafood', :price_range => '$$'},
+               {:title => 'La Pizzeria', :cuisine => 'Italian', :price_range => '$'},
+               
 ]
 
 restaurants.each do |restaurant|
