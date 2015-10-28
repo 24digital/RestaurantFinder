@@ -6,11 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-restaurants = [{:title => 'C Restaurant', :cuisine => 'Cuisine C', :price_range => 'Price Range C'},
-    	  {:title => 'A Restaurant', :cuisine => 'Cuisine A', :price_range => 'Price Range A'},
-    	  {:title => 'D Restaurant', :cuisine => 'Cuisine D', :price_range => 'Price Range D'},
-    	  {:title => 'B Restaurant', :cuisine => 'Cuisine B', :price_range => 'Price Range B'},
-  	 ]
+restaurants = [{:title => 'Oriental Garden', :cuisine => 'Sushi', :price_range => '$'},
+               {:title => 'Peninsula Grill', :cuisine => 'Southern American', :price_range => '$$$'},
+               {:title => 'Halls Chophouse', :cuisine => 'Steakhouse', :price_range => '$$$'},
+               {:title => 'EVO Pizzeria', :cuisine => 'Pizza', :price_range => '$'},
+               {:title => 'McGrady', :cuisine => 'American', :price_range => '$$'},
+               {:title => 'Red Drum Restaurant', :cuisine => 'Tex-Mex', :price_range => '$$'},
+               {:title => 'Coast Bar and Grill', :cuisine => 'Seafood', :price_range => '$$'},
+               {:title => 'Monza', :cuisine => 'Pizza', :price_range => '$'},
+               {:title => 'La Pizzeria', :cuisine => 'Italian', :price_range => '$'},
+               {:title => 'Xiao Bao Biscuit', :cuisine => 'Asian', :price_range => '$'},
+]
 
 restaurants.each do |restaurant|
   Restaurant.create!(restaurant)

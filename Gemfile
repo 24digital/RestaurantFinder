@@ -60,5 +60,6 @@ gem 'database_cleaner' #to clear Cucumber's test databse between runs
 gem 'capybara' #lets Cucumber pretend to be a web browser
 gem 'launchy' #a usefule debuggin aid for user stories
 gem 'rspec-rails'
+gem 'cucumber-websteps'
 
 end
