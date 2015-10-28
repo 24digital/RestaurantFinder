@@ -54,6 +54,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  resources :restaurant
+  resources :restaurant, path: '/admin/restaurant'
   root 'restaurant#index'
 end

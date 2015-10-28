@@ -2,3 +2,24 @@
 %p Find me in app/views/restaurant/index.html.haml
 = @restaurants
 %p Team 2 Rocks!!!
+
+
+-#= form_tag restaurant_path, :method => :get do
+-#  Include: 
+-#  - @all_environments.each do |environment|
+-#    = environment
+-#    = check_box_tag "environments[#{environment}]", environment, @selected_environments.include?(environment)
+-#  = submit_tag 'Refresh', id: "environment_submit"
+  
+  
+= form_tag root_path, :method => :get, :id => 'environments_form' do
+
+  Include: 
+  - @all_environments.each do |environment|
+    = environment
+    = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
+  = submit_tag 'Refresh', :id => 'environment_submit'
+  
+%p
+
+= @selected_environments[0]
