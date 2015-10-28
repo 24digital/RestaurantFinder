@@ -6,11 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-restaurants = [{:title => 'Restaurant A', :cuisine => 'Cuisine A', :price_range => 'Price Range A'},
-    	  {:title => 'Restaurant B', :cuisine => 'Cuisine A', :price_range => 'Price Range B'},
-    	  {:title => 'Restaurant C', :cuisine => 'Cuisine A', :price_range => 'Price Range C'},
+restaurants = [{:title => 'C Restaurant', :cuisine => 'Cuisine C', :price_range => 'Price Range C'},
+    	  {:title => 'A Restaurant', :cuisine => 'Cuisine A', :price_range => 'Price Range A'},
+    	  {:title => 'D Restaurant', :cuisine => 'Cuisine D', :price_range => 'Price Range D'},
+    	  {:title => 'B Restaurant', :cuisine => 'Cuisine B', :price_range => 'Price Range B'},
   	 ]
 
 restaurants.each do |restaurant|
-  Movie.create!(restaurant)
+  Restaurant.create!(restaurant)
 end

@@ -20,3 +20,15 @@
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
   = submit_tag 'Refresh', :id => 'environment_submit'
 
+%table#restaurants
+  %thead
+    %tr
+      %th Restaurant Title
+      %th Cuisine Type
+      %th Price Range
+  %tbody
+    - @restaurants.each do |restaurant|
+      %tr
+        %td= restaurant.title 
+        %td= restaurant.cuisine
+        %td= restaurant.price_range
