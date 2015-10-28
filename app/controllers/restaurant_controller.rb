@@ -2,10 +2,6 @@ class RestaurantController < ApplicationController
   def index
     @restaurants="Test, my value is coming from the restaurant_controller.rb"
     # can later be moved to the Restaurant model
-    @selected_environments = Array.new
-    #logger.debug "--------------------------"
-    #logger.debug @selected_environments
-    
     ordering = {:release_date => :asc}
     @all_environments = Restaurant.all_environments
     @selected_environments = params[:environments] || session[:environments] || {}
@@ -17,6 +13,8 @@ class RestaurantController < ApplicationController
       redirect_to :environments => @selected_environments and return
     end
     @restaurants = Restaurant.order(ordering)
+    logger.debug "--------------------------"
+    logger.debug @selected_environments
   end
   
   def show
