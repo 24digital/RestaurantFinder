@@ -13,8 +13,8 @@ class RestaurantController < ApplicationController
       redirect_to :environments => @selected_environments and return
     end
     @restaurants = Restaurant.order(ordering)
-    logger.debug "--------------------------"
-    logger.debug @selected_environments
+    #logger.debug "--------------------------"
+    #logger.debug @selected_environments
   end
   
   def show
