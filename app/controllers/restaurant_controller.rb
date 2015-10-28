@@ -1,5 +1,5 @@
 class RestaurantController < ApplicationController
   def index
-    @resturants="test"
+    @restaurants="Test, my value is coming from the restaurant_controller.rb"
   end
 end
