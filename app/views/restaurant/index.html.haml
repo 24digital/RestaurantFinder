@@ -1,7 +1,7 @@
-%h1 Restaurant#index
-%p Find me in app/views/restaurant/index.html.haml
-= @restaurants
-%p Team 2 Rocks!!!
+%h1 Restaurant Finder
+
+
+
 
 
 -#= form_tag restaurant_path, :method => :get do
@@ -12,13 +12,14 @@
 -#  = submit_tag 'Refresh', id: "environment_submit"
   
   
-= form_tag root_path, :method => :get, :id => 'environments_form' do
+= form_tag root_path, :method => :get, :id => 'search_form' do
 
   Include: 
   - @all_environments.each do |environment|
     = environment
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
-  = submit_tag 'Refresh', :id => 'environment_submit'
+
+  = submit_tag 'Search', :id => 'search_submit'
 
 %table#restaurants
   %thead
