@@ -1,9 +1,5 @@
 %h1 Restaurant Finder
 
-
-
-
-
 -#= form_tag restaurant_path, :method => :get do
 -#  Include: 
 -#  - @all_environments.each do |environment|
@@ -11,14 +7,12 @@
 -#    = check_box_tag "environments[#{environment}]", environment, @selected_environments.include?(environment)
 -#  = submit_tag 'Refresh', id: "environment_submit"
   
-  
 = form_tag root_path, :method => :get, :id => 'search_form' do
 
   Include: 
   - @all_environments.each do |environment|
-    = environment
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
-
+    = environment
   = submit_tag 'Search', :id => 'search_submit'
 
 %table#restaurants
