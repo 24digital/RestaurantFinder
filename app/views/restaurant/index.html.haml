@@ -13,8 +13,14 @@
   - @all_environments.each do |environment|
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
     = environment
+  %p
+  Price Range
+  - @all_price_ranges.each do |range|
+    = radio_button_tag "ranges[#{range}]","#{range}", @selected_ranges.include?(range),  :id => "ranges_#{range}"
+    = range
+  %p
   = submit_tag 'Search', :id => 'search_submit'
-
+  
 %table#restaurants
   %thead
     %tr

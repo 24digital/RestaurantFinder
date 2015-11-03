@@ -4,7 +4,9 @@ class RestaurantController < ApplicationController
     # can later be moved to the Restaurant model
     ordering = {:title => :asc}
     @all_environments = Restaurant.all_environments
+    @all_price_ranges = Restaurant.all_price_ranges
     @selected_environments = params[:environments] || session[:environments] || {}
+    @selected_ranges = params[:ranges] || session[:ranges] || {}
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
     end
