@@ -12,9 +12,13 @@ class RestaurantController < ApplicationController
       session[:environments] = @selected_environments
       redirect_to :environments => @selected_environments and return
     end
-    @restaurants = Restaurant.order(ordering)
+    #@restaurants = Restaurant.order(ordering)
     #logger.debug "--------------------------"
     #logger.debug @selected_environments
+    
+     @environments=[]
+   @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
+   @restaurants = Restaurant.where(:id => @environments)
   end
   
   def show
