@@ -32,7 +32,11 @@ environments = [{:restaurant_id => 1, :env_type => 'Outdoor sitting'},
 {:restaurant_id => 2, :env_type => 'Kid friendly'},
 {:restaurant_id => 3, :env_type => 'Nice view'},
 {:restaurant_id => 4, :env_type => 'Meet for a drink'},
-{:restaurant_id => 5, :env_type => 'Meet for a drink'}
+{:restaurant_id => 5, :env_type => 'Meet for a drink'},
+{:restaurant_id => 6, :env_type => 'Casual'},
+{:restaurant_id => 7, :env_type => 'Casual'},
+{:restaurant_id => 9, :env_type => 'Casual'},
+{:restaurant_id => 10, :env_type => 'Casual'}
 
 ]
 
