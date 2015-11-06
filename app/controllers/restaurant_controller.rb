@@ -17,7 +17,7 @@ class RestaurantController < ApplicationController
     #logger.debug @selected_environments
     
      @environments=[]
-   @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
+   @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
    @restaurants = Restaurant.where(:id => @environments)
   end
   
