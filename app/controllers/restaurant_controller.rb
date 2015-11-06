@@ -4,7 +4,9 @@ class RestaurantController < ApplicationController
     # can later be moved to the Restaurant model
     ordering = {:title => :asc}
     @all_environments = Restaurant.all_environments
+    @all_cuisines = Restaurant.all_cuisines
     @selected_environments = params[:environments] || session[:environments] || {}
+    @selected_cuisines = params[:cuisines] || session[:cuisines] || {}
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
     end
@@ -12,13 +14,23 @@ class RestaurantController < ApplicationController
       session[:environments] = @selected_environments
       redirect_to :environments => @selected_environments and return
     end
+    
+    if @selected_cuisines == {}
+      @selected_cuisines = Hash[@all_cuisines.map {|cuisine| [cuisine, cuisine]}]
+    end
+    if params[:cuisines] != session[:cuisines]
+      session[:cuisines] = @selected_cuisines
+      redirect_to :cuisines => @selected_cuisines and return
+    end
     #@restaurants = Restaurant.order(ordering)
     #logger.debug "--------------------------"
     #logger.debug @selected_environments
     
-     @environments=[]
-   @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-   @restaurants = Restaurant.where(:id => @environments)
+    @environments=[]
+    @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
+    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).order(ordering)
+    #where(:id => @environments)
+    
   end
   
   def show
