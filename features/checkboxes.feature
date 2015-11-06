@@ -62,3 +62,7 @@ Scenario: restrict to restaurants with "Outdoor sitting", "Casual", "Romantic", 
   And I press "Search" 
   Then I should see the following restaurants: Oriental Garden, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, La Pizzeria, Xiao Bao Biscuit
   Then I should not see the following restaurants: Peninsula Grill, EVO Pizzeria, McGrady, Monza
+  
+#Scenario: ensure that checkboxes appear before the environment type options
+#  When I am on the RestaurantFinder home page
+#  Then the checkbox should appear before the environment type option for each of the following environment types: Outdoor sitting, Casual, Romantic, Kid friendly, Meet for a drink, Group dining, Rooftop, Nice view
