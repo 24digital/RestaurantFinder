@@ -12,37 +12,35 @@ class RestaurantController < ApplicationController
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
     end
-    if params[:environments] != session[:environments]
-      session[:environments] = @selected_environments
-      redirect_to :environments => @selected_environments and return
-    end
-    
     if @selected_cuisines == {}
       @selected_cuisines = Hash[@all_cuisines.map {|cuisine| [cuisine, cuisine]}]
     end
-    if params[:cuisines] != session[:cuisines]
+    if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines]
+      session[:environments] = @selected_environments
       session[:cuisines] = @selected_cuisines
-      redirect_to :cuisines => @selected_cuisines and return
+      redirect_to :environments => @selected_environments, :cuisines => @selected_cuisines and return
     end
+    
+
     #@restaurants = Restaurant.order(ordering)
     #logger.debug "--------------------------"
     #logger.debug @selected_environments
     
     @environments=[]
     @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys)
-    #.where(:id => @environments)
+      
+    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments)
     
 
-     #if @selected_ranges == '$'
-     #  @restaurants = Restaurant.where(:price_range => '$')
-      # elsif @selected_ranges == '$$'
-      # @restaurants = Restaurant.where(:price_range => '$$')
-      # elsif @selected_ranges == '$$$'
-      # @restaurants = Restaurant.where(:price_range => '$$$')
-      # else
-      # @restaurants = Restaurant.where(:id => @environments)
-     #end
+     if @selected_ranges == '$'
+       @restaurants = Restaurant.where(:price_range => '$')
+       elsif @selected_ranges == '$$'
+       @restaurants = Restaurant.where(:price_range => '$$')
+       elsif @selected_ranges == '$$$'
+       @restaurants = Restaurant.where(:price_range => '$$$')
+       else
+       @restaurants = Restaurant.where(:id => @environments)
+     end
 #:id => @environments
   end
   
