@@ -31,15 +31,15 @@ class RestaurantController < ApplicationController
     @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments).order(ordering)
     
 
-     if @selected_ranges == '$'
-       @restaurants = Restaurant.where(:price_range => '$')
-       elsif @selected_ranges == '$$'
-       @restaurants = Restaurant.where(:price_range => '$$')
-       elsif @selected_ranges == '$$$'
-       @restaurants = Restaurant.where(:price_range => '$$$')
-       else
-       @restaurants = Restaurant.where(:id => @environments)
-     end
+    #if @selected_ranges == '$'
+    #   @restaurants = Restaurant.where(:price_range => '$')
+    #elsif @selected_ranges == '$$'
+    #   @restaurants = Restaurant.where(:price_range => '$$')
+    #elsif @selected_ranges == '$$$'
+    #   @restaurants = Restaurant.where(:price_range => '$$$')
+    #else
+    #   @restaurants = Restaurant.where(:id => @environments)
+    #end
 #:id => @environments
   end
   
