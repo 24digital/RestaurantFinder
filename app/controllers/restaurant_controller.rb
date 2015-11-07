@@ -30,19 +30,19 @@ class RestaurantController < ApplicationController
     
     @environments=[]
     @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments)
+    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys)
+    #.where(:id => @environments)
     
-     @environments=[]
-     @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-     if @selected_ranges == '$'
-       @restaurants = Restaurant.where(:price_range => '$')
-       elsif @selected_ranges == '$$'
-       @restaurants = Restaurant.where(:price_range => '$$')
-       elsif @selected_ranges == '$$$'
-       @restaurants = Restaurant.where(:price_range => '$$$')
-       else
-       @restaurants = Restaurant.where(:id => @environments)
-     end
+
+     #if @selected_ranges == '$'
+     #  @restaurants = Restaurant.where(:price_range => '$')
+      # elsif @selected_ranges == '$$'
+      # @restaurants = Restaurant.where(:price_range => '$$')
+      # elsif @selected_ranges == '$$$'
+      # @restaurants = Restaurant.where(:price_range => '$$$')
+      # else
+      # @restaurants = Restaurant.where(:id => @environments)
+     #end
 #:id => @environments
   end
   
