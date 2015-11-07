@@ -28,8 +28,7 @@ class RestaurantController < ApplicationController
     
     @environments=[]
     @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-      
-    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments)
+    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments).order(ordering)
     
 
      if @selected_ranges == '$'
