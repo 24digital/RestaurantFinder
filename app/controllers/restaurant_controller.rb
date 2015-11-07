@@ -5,6 +5,8 @@ class RestaurantController < ApplicationController
     ordering = {:title => :asc}
     @all_environments = Restaurant.all_environments
     @all_cuisines = Restaurant.all_cuisines
+    @all_price_ranges = Restaurant.all_price_ranges
+    @selected_ranges = params[:range]  || {}
     @selected_environments = params[:environments] || session[:environments] || {}
     @selected_cuisines = params[:cuisines] || session[:cuisines] || {}
     if @selected_environments == {}
@@ -31,6 +33,18 @@ class RestaurantController < ApplicationController
     @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).order(ordering)
     #where(:id => @environments)
     
+     @environments=[]
+     @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
+     if @selected_ranges == '$'
+       @restaurants = Restaurant.where(:price_range => '$')
+       elsif @selected_ranges == '$$'
+       @restaurants = Restaurant.where(:price_range => '$$')
+       elsif @selected_ranges == '$$$'
+       @restaurants = Restaurant.where(:price_range => '$$$')
+       else
+       @restaurants = Restaurant.where(:id => @environments)
+     end
+#:id => @environments
   end
   
   def show

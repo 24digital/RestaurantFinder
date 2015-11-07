@@ -23,6 +23,17 @@
   - @all_cuisines.each do |cuisine| 
     = check_box_tag "cuisines[#{cuisine}]", 1, @selected_cuisines.include?(cuisine), :id => "cuisines_#{cuisine}"
     = cuisine
+    
+  Include: 
+  - @all_environments.each do |environment|
+    = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
+    = environment
+  
+  Price Range
+  - @all_price_ranges.each do |range|
+    = radio_button_tag "range","#{range}", @selected_ranges.include?(range),  :id => "ranges_#{range}"
+    = range
+  
   = submit_tag 'Search', :id => 'search_submit'
 
 %table#restaurants
