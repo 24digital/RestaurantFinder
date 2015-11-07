@@ -8,13 +8,14 @@ class RestaurantController < ApplicationController
     @all_price_ranges = Restaurant.all_price_ranges
     @selected_ranges = params[:range]  || {}
     @selected_environments = params[:environments] || session[:environments] || {}
-    @selected_cuisines = params[:cuisines] || session[:cuisines] || {}
+    @selected_cuisines = params[:cuisines] || session[:cuisines] || []
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
     end
-    if @selected_cuisines == {}
-      @selected_cuisines = Hash[@all_cuisines.map {|cuisine| [cuisine, cuisine]}]
+    if @selected_cuisines == []
+      @selected_cuisines = @all_cuisines
     end
+    
     if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines]
       session[:environments] = @selected_environments
       session[:cuisines] = @selected_cuisines
@@ -28,8 +29,7 @@ class RestaurantController < ApplicationController
     
     @environments=[]
     @environments = Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-    @restaurants = Restaurant.where(:cuisine => @selected_cuisines.keys).where(:id => @environments).order(ordering)
-    
+    @restaurants = Restaurant.where(:cuisine => @selected_cuisines).where(:id => @environments).order(ordering)
 
     #if @selected_ranges == '$'
     #   @restaurants = Restaurant.where(:price_range => '$')

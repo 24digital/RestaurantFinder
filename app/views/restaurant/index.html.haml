@@ -11,10 +11,11 @@
 
 = form_tag root_path, :method => :get, :id => 'search_form' do
   %p 
-  Cuisine:
-  - @all_cuisines.each do |cuisine| 
-    = check_box_tag "cuisines[#{cuisine}]", 1, @selected_cuisines.include?(cuisine), :id => "cuisines_#{cuisine}"
-    = cuisine
+  Cuisine
+  -#- @all_cuisines.each do |cuisine| 
+  = select_tag "cuisines[]", options_for_select(@all_cuisines.collect), :id => "cuisines", :multiple => true
+  -#  = check_box_tag "cuisines[#{cuisine}]", 1, @selected_cuisines.include?(cuisine), :id => "cuisines_#{cuisine}"
+  -#  = cuisine
   %p    
   Include: 
   - @all_environments.each do |environment|
