@@ -4,6 +4,8 @@ class RestaurantController < ApplicationController
     # can later be moved to the Restaurant model
     ordering = {:title => :asc}
     @all_environments = Restaurant.all_environments
+    @all_price_ranges = Restaurant.all_price_ranges
+    @selected_ranges = params[:range]  || {}
     @selected_environments = params[:environments] || session[:environments] || {}
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
@@ -17,8 +19,17 @@ class RestaurantController < ApplicationController
     #logger.debug @selected_environments
     
      @environments=[]
-   @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
-   @restaurants = Restaurant.where(:id => @environments)
+     @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
+     if @selected_ranges == '$'
+       @restaurants = Restaurant.where(:price_range => '$')
+       elsif @selected_ranges == '$$'
+       @restaurants = Restaurant.where(:price_range => '$$')
+       elsif @selected_ranges == '$$$'
+       @restaurants = Restaurant.where(:price_range => '$$$')
+       else
+       @restaurants = Restaurant.where(:id => @environments)
+     end
+#:id => @environments
   end
   
   def show
