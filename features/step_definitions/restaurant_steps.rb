@@ -66,3 +66,41 @@ end
 #     #end
 #   end
 # end
+
+Then /^"([^"]*)" should (not )?be selected for "([^"]*)"$/ do |selected_option, not_case, selection_menu|
+  if not_case
+    has_select?(selection_menu, :selected => selected_option).should == false
+  else
+    has_select?(selection_menu, :selected => selected_option).should == false
+  end
+end
+
+When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case, cuisine_list|
+  cuisine_list.split(/,\s*/).each do |cuisine| 
+    # \s 	Any whitespace character
+    # a* 	Zero or more of a
+    cuisine_id = "cuisines"
+    if unselect_case 
+    # uncheck returns true or false depending on the regex above
+      unselect cuisine, :from => cuisine_id
+      # Capybara method
+    else
+      step %Q{I select "#{cuisine}" from "#{cuisine_id}"}
+      # taken from web_steps.rb
+      # Capybara method
+    end
+  end
+end
+
+Then /^the following cuisine options should (not )?be selected: (.*)$/ do |should_not_case, cuisine_list|
+  cuisine_list.split(/,\s*/).each do |cuisine|
+    cuisine_id = "cuisines"
+    if should_not_case
+      step %Q{"#{cuisine}" should not be selected for "#{cuisine_id}"}
+      # Capybara method
+    else
+      step %Q{"#{cuisine}" should be selected for "#{cuisine_id}"}
+      # Capybara method
+    end
+  end
+end
