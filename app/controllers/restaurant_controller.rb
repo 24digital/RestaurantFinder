@@ -1,5 +1,6 @@
 class RestaurantController < ApplicationController
   def index
+  
     @restaurants="Test, my value is coming from the restaurant_controller.rb"
     # can later be moved to the Restaurant model
     ordering = {:title => :asc}
