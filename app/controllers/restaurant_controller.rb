@@ -43,6 +43,7 @@ class RestaurantController < ApplicationController
        @restaurants = Restaurant.where(:cuisine => @selected_cuisines).where(:id => @environments).order(ordering)
     end
 #:id => @environments
+ 
   end
   
   def show
