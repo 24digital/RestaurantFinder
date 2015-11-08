@@ -8,7 +8,7 @@ class Restaurant < ActiveRecord::Base
         return %w(Sushi Southern\ American Steakhouse Pizza American Tex-Mex Seafood Italian Asian)
     end
     def self.all_price_ranges
-        return %w($ $$ $$$)
+        return %w($ $$ $$$ All)
     end
 end
 

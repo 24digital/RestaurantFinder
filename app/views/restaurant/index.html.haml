@@ -10,19 +10,19 @@
 -#  = submit_tag 'Refresh', id: "environment_submit"
 
 = form_tag root_path, :method => :get, :id => 'search_form' do
-  %p 
-  Cuisine
+  %p#menu
+  Cuisine:
   -#- @all_cuisines.each do |cuisine| 
   = select_tag "cuisines[]", options_for_select(@all_cuisines.collect), :id => "cuisines", :multiple => true
   -#  = check_box_tag "cuisines[#{cuisine}]", 1, @selected_cuisines.include?(cuisine), :id => "cuisines_#{cuisine}"
   -#  = cuisine
   %p    
-  Include: 
+  Environment: 
   - @all_environments.each do |environment|
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
     = environment
   %p
-  Price Range
+  Price Range:
   - @all_price_ranges.each do |range|
     = radio_button_tag "range","#{range}", @selected_ranges.include?(range),  :id => "ranges_#{range}"
     = range
