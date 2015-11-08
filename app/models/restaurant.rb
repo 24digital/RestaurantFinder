@@ -5,7 +5,7 @@ class Restaurant < ActiveRecord::Base
         return %w(Outdoor\ sitting Casual Romantic Kid\ friendly Meet\ for\ a\ drink Group\ dining Rooftop Nice\ view)
     end
     def self.all_price_ranges
-        return %w($ $$ $$$)
+        return %w($ $$ $$$ All)
     end
 end
 

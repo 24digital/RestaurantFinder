@@ -11,15 +11,12 @@ class RestaurantController < ApplicationController
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
     end
-    if params[:environments] != session[:environments]
-      session[:environments] = @selected_environments
-      redirect_to :environments => @selected_environments and return
-    end
+  
     #@restaurants = Restaurant.order(ordering)
     #logger.debug "--------------------------"
     #logger.debug @selected_environments
     
-     @environments=[]
+    # @environments=[]
      @environments= Environment.select(:restaurant_id).where(:env_type => @selected_environments.keys)
      if @selected_ranges == '$'
        @restaurants = Restaurant.where(:price_range => '$')
@@ -31,6 +28,7 @@ class RestaurantController < ApplicationController
        @restaurants = Restaurant.where(:id => @environments)
      end
 #:id => @environments
+ 
   end
   
   def show
