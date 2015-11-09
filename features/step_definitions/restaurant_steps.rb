@@ -25,13 +25,9 @@ When /I (un)?check the following environment checkboxes: (.*)/ do |uncheck_case,
     if uncheck_case 
     # uncheck returns true or false depending on the regex above
       uncheck(environment) 
-      #step %Q{I uncheck "#{environment}"}
-      # taken from web_steps.rb
       # Capybara method
     else
       check(environment)
-      #step %Q{I check "#{environment}"}
-      # taken from web_steps.rb
       # Capybara method
     end
   end
@@ -53,16 +49,5 @@ Then /^the following environment checkboxes should (not )?be checked: (.*)$/ do 
       has_checked_field?(environment).should == true
       # Capybara method
     end
-  end
-end
-
-Then /^the checkbox should appear before the environment type option for each of the following environment types: (.*)$/ do |environment_list|
-  environment_list.split(/,\s*/).each do |environment|
-    environment_id = "[@id="+"environments_#{environment}"+"]"
-    step %Q{I should see #{environment_id} before #{environment}}
-#     #if page.all.include?("#{environment_id}", :visible => :all) & page.all.include?("#{environment}")
-#     page.find(environment_id).index.should <= page.body.index("#{environment}")
-#     #page.find_by_id.index("#{environment_id}").should <= page.all.index("#{environment}")
-#     #end
   end
 end
