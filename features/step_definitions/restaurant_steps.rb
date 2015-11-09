@@ -51,3 +51,19 @@ Then /^the following environment checkboxes should (not )?be checked: (.*)$/ do 
     end
   end
 end
+
+When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case, cuisine_list|
+  cuisine_list.split(/,\s*/).each do |cuisine| 
+    # \s 	Any whitespace character
+    # a* 	Zero or more of a
+    cuisine_id = "cuisines"
+    if unselect_case 
+    # uncheck returns true or false depending on the regex above
+      unselect cuisine, :from => cuisine_id
+      # Capybara method
+    else
+      step %Q{I select "#{cuisine}" from "#{cuisine_id}"}
+      # Capybara method
+    end
+  end
+end
