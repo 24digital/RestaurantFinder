@@ -38,19 +38,6 @@ Background: restaurants have been added to database
   | 9             | Casual             |
   | 10            | Casual             |     
 
-#Scenario: see cuisine type selection menu with the following options: "Sushi", "Southern American", "Steakhouse", "Pizza", "American", "Tex-Mex", "Seafood", "Italian", "Asian"
-#  When I am on the RestaurantFinder home page
-#  Then I should see the "cuisines" selection menue with the following options: Sushi, Southern American, Steakhouse, Pizza, American, Tex-Mex, Seafood, Italian, Asian 
-
-Scenario: select "Sushi", "Pizza", "Italian", or "Tex-Mex" cuisine type options
-  When I am on the RestaurantFinder home page
-  When I select the following cuisine type options: Sushi, Pizza, Italian, Tex-Mex
-  When I unselect the following cuisine type options: Southern American, Steakhouse, American, Seafood, Asian
-  #When I uncheck the following environment checkboxes: Kid friendly, Meet for a drink, Group dining, Nice view
-  And I press "Search" 
-  Then the following cuisine options should be selected: Sushi, Pizza, Italian, Tex-Mex
-  Then the following cuisine options should not be selected: Southern American, Steakhouse, American, Seafood, Asian
-
 Scenario: restrict to restaurants with "Sushi", "Pizza", "Italian", or "American" cuisine options
   When I am on the RestaurantFinder home page
   When I select the following cuisine type options: Sushi, Pizza, Italian, American

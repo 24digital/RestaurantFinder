@@ -25,13 +25,9 @@ When /I (un)?check the following environment checkboxes: (.*)/ do |uncheck_case,
     if uncheck_case 
     # uncheck returns true or false depending on the regex above
       uncheck(environment) 
-      #step %Q{I uncheck "#{environment}"}
-      # taken from web_steps.rb
       # Capybara method
     else
       check(environment)
-      #step %Q{I check "#{environment}"}
-      # taken from web_steps.rb
       # Capybara method
     end
   end
@@ -56,25 +52,6 @@ Then /^the following environment checkboxes should (not )?be checked: (.*)$/ do 
   end
 end
 
-# Then /^the checkbox should appear before the environment type option for each of the following environment types: (.*)$/ do |environment_list|
-#   environment_list.split(/,\s*/).each do |environment|
-#     environment_id = "#"+"environments_#{environment}"
-#     #step %Q{I should see #{environment_id} before #{environment}}
-#     #if page.all.include?("#{environment_id}", :visible => :all) & page.all.include?("#{environment}")
-#     page.find(environment_id).index.should <= page.body.index("#{environment}")
-#     #page.find_by_id.index("#{environment_id}").should <= page.all.index("#{environment}")
-#     #end
-#   end
-# end
-
-Then /^"([^"]*)" should (not )?be selected for "([^"]*)"$/ do |selected_option, not_case, selection_menu|
-  if not_case
-    has_select?(selection_menu, :selected => selected_option).should == false
-  else
-    has_select?(selection_menu, :selected => selected_option).should == false
-  end
-end
-
 When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case, cuisine_list|
   cuisine_list.split(/,\s*/).each do |cuisine| 
     # \s 	Any whitespace character
@@ -86,20 +63,6 @@ When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case,
       # Capybara method
     else
       step %Q{I select "#{cuisine}" from "#{cuisine_id}"}
-      # taken from web_steps.rb
-      # Capybara method
-    end
-  end
-end
-
-Then /^the following cuisine options should (not )?be selected: (.*)$/ do |should_not_case, cuisine_list|
-  cuisine_list.split(/,\s*/).each do |cuisine|
-    cuisine_id = "cuisines"
-    if should_not_case
-      step %Q{"#{cuisine}" should not be selected for "#{cuisine_id}"}
-      # Capybara method
-    else
-      step %Q{"#{cuisine}" should be selected for "#{cuisine_id}"}
       # Capybara method
     end
   end
