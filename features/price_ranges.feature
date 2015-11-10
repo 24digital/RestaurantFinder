@@ -1,9 +1,8 @@
-Feature: Add check boxes to front page 
+Feature: Filter restaurants by price range.
   
-    As a restaurant goer
-    So I can better prepare for the restaurant visit
-    I want checkboxes to indicate an environment. 
-
+  As a person who is on a budget
+  So I can see if I can afford the restaurant 
+  I want to select a radio button for a particular price range and be able to see the list of restaurants for that price range on the next page
 Background: restaurants have been added to database
 
   Given the following restaurants exist:
@@ -18,14 +17,16 @@ Background: restaurants have been added to database
   | Monza                   | Pizza             | $$         |
   | La Pizzeria             | Italian           | $          |
   | Xiao Bao Biscuit        | Asian             | $          |
+ 
+  
 
-Scenario: view checkboxes
-  When I am on the RestaurantFinder home page
-  Then I should see "Outdoor sitting"
-  And I should see "Casual"
-  And I should see "Romantic"
-  And I should see "Kid friendly"
-  And I should see "Meet for a drink"
-  And I should see "Group dining"
-  And I should see "Rooftop"
-  And I should see "Nice view"
+
+  
+  Scenario: restrict to movies with '$'
+  Given I am on the RestaurantFinder home page
+  When I check the following price range: $
+  And I press "search_submit"
+  Then I should see "Oriental Garden"
+  And I should see "EVO Pizzeria"
+  And I should see "La Pizzeria"
+  And I should see "Xiao Bao Biscuit"

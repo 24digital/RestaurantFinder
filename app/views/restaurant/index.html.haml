@@ -1,20 +1,26 @@
-%h1 Restaurant Finder
+-#<%= javascript_include_tag :application %>
 
--#= form_tag restaurant_path, :method => :get do
--#  Include: 
--#  - @all_environments.each do |environment|
--#    = environment
--#    = check_box_tag "environments[#{environment}]", environment, @selected_environments.include?(environment)
--#  = submit_tag 'Refresh', id: "environment_submit"
+%h1 Restaurant Finder
   
 = form_tag restaurant_index_path, :method => :get, :id => 'search_form' do
 
-  Include: 
+= form_tag root_path, :method => :get, :id => 'search_form' do
+  %p#menu
+  Cuisine:
+  = select_tag "cuisines[]", options_for_select(@all_cuisines.collect), :id => "cuisines", :multiple => true
+  %p    
+  Environment: 
   - @all_environments.each do |environment|
     = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
     = environment
+  %p
+  Price Range:
+  - @all_price_ranges.each do |range|
+    = radio_button_tag "range","#{range}",:prices => @selected_ranges.include?(range),  :id => "ranges#{range}"
+    =range
+  
   = submit_tag 'Search', :id => 'search_submit'
-
+%p
 %table#restaurants
   %thead
     %tr

@@ -7,15 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 restaurants = [{:id =>1, :title => 'Oriental Garden', :cuisine => 'Sushi', :price_range => '$'},
-               {:id =>2,:title => 'Peninsula Grill', :cuisine => 'Southern American', :price_range => '$$$'},
-               {:id =>3,:title => 'Halls Chophouse', :cuisine => 'Steakhouse', :price_range => '$$$'},
-               {:id =>4,:title => 'EVO Pizzeria', :cuisine => 'Pizza', :price_range => '$'},
-               {:id =>5,:title => 'McGrady', :cuisine => 'American', :price_range => '$$'},
-               {:id =>6,:title => 'Red Drum Restaurant', :cuisine => 'Tex-Mex', :price_range => '$$'},
-               {:id =>7,:title => 'Coast Bar and Grill', :cuisine => 'Seafood', :price_range => '$$'},
-               {:id =>8,:title => 'Monza', :cuisine => 'Pizza', :price_range => '$'},
-               {:id =>9,:title => 'La Pizzeria', :cuisine => 'Italian', :price_range => '$'},
-               {:id =>10,:title => 'Xiao Bao Biscuit', :cuisine => 'Asian', :price_range => '$'}
+               {:id =>2, :title => 'Peninsula Grill', :cuisine => 'Southern American', :price_range => '$$$'},
+               {:id =>3, :title => 'Halls Chophouse', :cuisine => 'Steakhouse', :price_range => '$$$'},
+               {:id =>4, :title => 'EVO Pizzeria', :cuisine => 'Pizza', :price_range => '$'},
+               {:id =>5, :title => 'McGrady', :cuisine => 'American', :price_range => '$$'},
+               {:id =>6, :title => 'Red Drum Restaurant', :cuisine => 'Tex-Mex', :price_range => '$$'},
+               {:id =>7, :title => 'Coast Bar and Grill', :cuisine => 'Seafood', :price_range => '$$'},
+               {:id =>8, :title => 'Monza', :cuisine => 'Pizza', :price_range => '$'},
+               {:id =>9, :title => 'La Pizzeria', :cuisine => 'Italian', :price_range => '$'},
+               {:id =>10, :title => 'Xiao Bao Biscuit', :cuisine => 'Asian', :price_range => '$'}
 ]
 
 
@@ -32,7 +32,11 @@ environments = [{:restaurant_id => 1, :env_type => 'Outdoor sitting'},
 {:restaurant_id => 2, :env_type => 'Kid friendly'},
 {:restaurant_id => 3, :env_type => 'Nice view'},
 {:restaurant_id => 4, :env_type => 'Meet for a drink'},
-{:restaurant_id => 5, :env_type => 'Meet for a drink'}
+{:restaurant_id => 5, :env_type => 'Meet for a drink'},
+{:restaurant_id => 6, :env_type => 'Casual'},
+{:restaurant_id => 7, :env_type => 'Casual'},
+{:restaurant_id => 9, :env_type => 'Casual'},
+{:restaurant_id => 10, :env_type => 'Casual'}
 
 ]
 
