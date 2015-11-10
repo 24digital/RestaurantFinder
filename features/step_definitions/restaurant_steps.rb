@@ -33,6 +33,18 @@ When /I (un)?check the following environment checkboxes: (.*)/ do |uncheck_case,
   end
 end
 
+When /I check the following price range radio button: (.*)/ do |price_list|
+  price_list.split(/,\s*/).each do |price| 
+    # \s 	Any whitespace character
+    # a* 	Zero or more of a
+    price = "ranges#{price}"
+      choose(price)
+      # Capybara method
+  
+  end
+end
+
+
 Then /^I should (not )?see the following restaurants: (.*)$/ do |should_not_case, restaurant_list|
   restaurant_list.split(/,\s*/).each do |restaurant|
     step %Q{I should #{should_not_case}see "#{restaurant}"}
