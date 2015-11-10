@@ -1,8 +1,6 @@
 class RestaurantController < ApplicationController
   def index
   
-    @restaurants="Test, my value is coming from the restaurant_controller.rb"
-    # can later be moved to the Restaurant model
     ordering = {:title => :asc}
     @all_environments = Restaurant.all_environments
     @all_cuisines = Restaurant.all_cuisines
@@ -16,6 +14,9 @@ class RestaurantController < ApplicationController
     end
     if @selected_cuisines == []
       @selected_cuisines = @all_cuisines
+    end
+    if @selected_ranges == ""
+      @selected_ranges = "All"
     end
     
     if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines] or params[:range] != session[:range]
@@ -42,7 +43,6 @@ class RestaurantController < ApplicationController
     else
        @restaurants = Restaurant.where(:cuisine => @selected_cuisines).where(:id => @environments).order(ordering)
     end
-#:id => @environments
  
   end
   
