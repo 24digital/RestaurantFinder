@@ -5,7 +5,7 @@
 = form_tag root_path, :method => :get, :id => 'search_form' do
   %p#menu
   Cuisine:
-  = select_tag "cuisines[]", options_for_select(@all_cuisines.collect), :id => "cuisines", :multiple => true
+  = select_tag "cuisines[]", options_for_select(@all_cuisines.collect, params[:cuisines]), :id => "cuisines", :multiple => true
   %p    
   Environment: 
   - @all_environments.each do |environment|
