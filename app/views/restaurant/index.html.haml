@@ -16,7 +16,7 @@
   %p
   Price Range:
   - @all_price_ranges.each do |range|
-    = radio_button_tag "range","#{range}",:prices => @selected_ranges.include?(range),  :id => "ranges#{range}"
+    = radio_button_tag "range","#{range}", @selected_ranges.include?(range), :prices => @selected_ranges.include?(range),  :id => "ranges#{range}"
     =range
   
   = submit_tag 'Search', :id => 'search_submit'
