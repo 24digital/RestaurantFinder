@@ -1,3 +1,14 @@
 -# in app/views/restaurant/show.html.haml
 
-%h2 Details about 
+%h2 Details about #{@restaurant.title}
+-# = form_tag restaurant_index_path, :method => :get, :id => 'search_form' do
+%ul#details
+  %li
+    Phone:
+    = @restaurant.phone
+  %li
+    Website:
+    = @restaurant.website
+
+
+= link_to 'Back to restaurant list', restaurant_index_path

@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20151105151046) do
     t.string   "title"
     t.string   "cuisine"
     t.string   "price_range"
+    t.string   "website"
+    t.string   "phone"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
