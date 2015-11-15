@@ -49,6 +49,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'rspec-rails'
   gem "erb2haml" #added by pman to convert existing erb to haml
   gem 'haml-rails' #added by pman to convert existing erb to haml
 end
@@ -59,7 +60,6 @@ gem 'cucumber-rails-training-wheels' #some pre-fabbed step definitions
 gem 'database_cleaner' #to clear Cucumber's test databse between runs
 gem 'capybara' #lets Cucumber pretend to be a web browser
 gem 'launchy' #a usefule debuggin aid for user stories
-gem 'rspec-rails'
+gem 'guard-rspec'
 gem 'cucumber-websteps'
-
 end
