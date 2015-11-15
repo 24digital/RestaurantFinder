@@ -1,4 +1,4 @@
-class Restaurant
+class MyTest
     attr_accessible :id, :title, :cuisine, :price_range
     has_many :environments
     
