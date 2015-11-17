@@ -8,7 +8,7 @@
     =@restaurant.phone
   %li
     Website:
-    = link_to @restaurant.website
+    = link_to @restaurant.website, url_with_protocol(@restaurant.website), :target => '_blank'
 
 
 = link_to 'Back to restaurant list', restaurant_index_path
