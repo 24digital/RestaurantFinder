@@ -5,10 +5,10 @@
 %ul#details
   %li
     Phone:
-    = @restaurant.phone
+    =@restaurant.phone
   %li
     Website:
-    = @restaurant.website
+    = link_to @restaurant.website
 
 
 = link_to 'Back to restaurant list', restaurant_index_path
