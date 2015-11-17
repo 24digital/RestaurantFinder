@@ -1,6 +1,8 @@
 -#<%= javascript_include_tag :application %>
 
 %h1 Restaurant Finder
+  
+-# = form_tag restaurant_index_path, :method => :get, :id => 'search_form' do
 
 = form_tag root_path, :method => :get, :id => 'search_form' do
   %p#menu
@@ -28,7 +30,8 @@
   %tbody
     - @restaurants.each do |restaurant|
       %tr
-        %td= restaurant.title 
+        %td= link_to restaurant.title, restaurant_path(restaurant)
         %td= restaurant.cuisine
         %td= restaurant.price_range
+    
         

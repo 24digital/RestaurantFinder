@@ -1,4 +1,9 @@
-Rails.application.routes.draw do
+RestaurantFinder::Application.routes.draw do
+  resources :restaurant, path: '/admin/restaurant'
+  # map '/' to be a redirect to '/movies'
+  #root :to => redirect('/restaurant')
+  root 'restaurant#index'
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,7 +58,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
-  resources :restaurant, path: '/admin/restaurant'
-  root 'restaurant#index'
 end
