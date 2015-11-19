@@ -52,6 +52,7 @@ group :development do
   gem 'rspec-rails'
   gem "erb2haml" #added by pman to convert existing erb to haml
   gem 'haml-rails' #added by pman to convert existing erb to haml
+  gem "table_print"
 end
 
 group :test do
