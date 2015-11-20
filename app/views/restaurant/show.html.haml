@@ -10,5 +10,15 @@
     Website:
     = link_to @restaurant.website, url_with_protocol(@restaurant.website), :target => '_blank'
 
-
 = link_to 'Back to restaurant list', restaurant_index_path
+
+%h2 Leave a review about  #{@restaurant.title}
+%form#submit_review{:method => "post", :name => "submit_review"}
+  Name: 
+  %br/  
+  %input#name{:name => "name", :type => "text"}
+  Description : 
+  %br/ 
+  %textarea#description{:cols => "50", :name => "description", :rows => "5"}
+  %input{:name => "submit", :type => "submit", :value => "Submit"}/
+  %input{:name => "reset", :type => "reset", :value => "Reset"}/
