@@ -26,7 +26,6 @@ Background: restaurants have been added to database
   | 1             | Casual             |
   | 1             | Romantic           |
   | 8             | Kid friendly       |
-  | 2             | Rooftop            |
   | 2             | Kid friendly       |
   | 3             | Nice view          |
   | 4             | Meet for a drink   |
@@ -44,21 +43,20 @@ Scenario: view checkboxes
   And I should see "Kid friendly"
   And I should see "Meet for a drink"
   And I should see "Group dining"
-  And I should see "Rooftop"
   And I should see "Nice view"
   
-Scenario: check "Outdoor sitting", "Casual", "Romantic", or "Rooftop" environment checkboxes
+Scenario: check "Outdoor sitting", "Casual", or "Romantic" environment checkboxes
   When I am on the RestaurantFinder home page
-  When I check the following environment checkboxes: Outdoor sitting, Casual, Romantic, Rooftop
+  When I check the following environment checkboxes: Outdoor sitting, Casual, Romantic
   When I uncheck the following environment checkboxes: Kid friendly, Meet for a drink, Group dining, Nice view
   And I press "Search" 
-  Then the following environment checkboxes should be checked: Outdoor sitting, Casual, Romantic, Rooftop
+  Then the following environment checkboxes should be checked: Outdoor sitting, Casual, Romantic
   Then the following environment checkboxes should not be checked: Kid friendly, Meet for a drink, Group dining, Nice view
   
 Scenario: restrict to restaurants with "Outdoor sitting", "Casual", "Romantic", or "Nice view" environments environment options
   When I am on the RestaurantFinder home page
   When I check the following environment checkboxes: Outdoor sitting, Casual, Romantic, Nice view
-  When I uncheck the following environment checkboxes: Kid friendly, Meet for a drink, Group dining, Rooftop
+  When I uncheck the following environment checkboxes: Kid friendly, Meet for a drink, Group dining
   And I press "Search" 
   Then I should see the following restaurants: Oriental Garden, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, La Pizzeria, Xiao Bao Biscuit
   Then I should not see the following restaurants: Peninsula Grill, EVO Pizzeria, McGrady, Monza
