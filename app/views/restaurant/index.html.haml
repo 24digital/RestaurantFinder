@@ -4,26 +4,24 @@
   
 -# = form_tag restaurant_index_path, :method => :get, :id => 'search_form' do
 
-= form_tag root_path, :method => :get, :id => 'search_form' do
-  #cuisine
-    %p
-    %div Cuisine:
-    = select_tag "cuisines[]", options_for_select(@all_cuisines.collect, params[:cuisines]), :id => "cuisines", :multiple => true
-  #price_range
-    %p
-    Price Range:
-    - @all_price_ranges.each do |range|
-      = radio_button_tag "range","#{range}", @selected_ranges.include?(range), :prices => @selected_ranges.include?(range),  :id => "ranges#{range}"
-      =range
-  #environment  
-    %p 
-    %div Environment: 
-    %span
-      - @all_environments.each do |environment|
-        = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
-        = environment
-  
-  = submit_tag 'Search', :id => 'search_submit'
+#form_container
+  = form_tag root_path, :method => :get, :id => 'search_form' do
+    #cuisine
+      %div Cuisine:
+      = select_tag "cuisines[]", options_for_select(@all_cuisines.collect, params[:cuisines]), :id => "cuisines", :multiple => true
+    #price_range
+      Price Range:
+      - @all_price_ranges.each do |range|
+        = radio_button_tag "range","#{range}", @selected_ranges.include?(range), :prices => @selected_ranges.include?(range),  :id => "ranges#{range}"
+        =range
+    #environment  
+      %span Environment: 
+      %div
+        - @all_environments.each do |environment|
+          = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
+          = environment
+    
+    = submit_tag 'Search', :id => 'search_submit'
 %p
 %table#restaurants
   %thead
