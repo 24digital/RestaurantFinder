@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105151046) do
+ActiveRecord::Schema.define(version: 20151124213930) do
 
   create_table "environments", force: :cascade do |t|
     t.string   "env_type"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20151105151046) do
     t.string   "phone"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "user_name"
+    t.string   "review"
+    t.integer  "restaurant"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
