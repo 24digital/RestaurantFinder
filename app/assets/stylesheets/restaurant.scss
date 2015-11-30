@@ -1,9 +1,24 @@
-<<<<<<< HEAD
 // Place all the styles related to the restaurant controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @charset "UTF-8";
+table#review {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+  text: center;
+}
+table#review th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: brown;
+}
+table#review th, table#movies td {
+  padding: 4px;
+  text-align: left;
+}
 body h1 {
 	color: #000000;
 	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
@@ -101,21 +116,3 @@ body {
 	margin-left: auto;
 	max-width: 1080px;
 }
-=======
-table#review {
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: 2px solid black;
-  text: center;
-}
-table#review th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: brown;
-}
-table#review th, table#movies td {
-  padding: 4px;
-  text-align: left;
-}
->>>>>>> master
