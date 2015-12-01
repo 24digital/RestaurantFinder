@@ -1,5 +1,5 @@
 RestaurantFinder::Application.routes.draw do
-  resources :restaurant #, path: '/admin/restaurant'
+  resources :restaurant , path: '/admin/restaurant'
   # map '/' to be a redirect to '/movies'
   #root :to => redirect('/restaurant')
   root 'restaurant#index'

@@ -56,6 +56,7 @@ group :development do
 end
 
 group :test do
+gem 'simplecov', :require => false
 gem 'cucumber-rails',:require => false
 gem 'cucumber-rails-training-wheels' #some pre-fabbed step definitions
 gem 'database_cleaner' #to clear Cucumber's test databse between runs

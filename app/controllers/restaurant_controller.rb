@@ -47,11 +47,13 @@ class RestaurantController < ApplicationController
   end
   
   def show
-    id = params[:id] # retrieve movie ID from URI route
-    @restaurant = Restaurant.find(id) # look up restaurants by unique ID
    
-      Review.create!(id: id,user_name: params[:name],review: params[:description])
-      @reviews = Review.all
+    @id = params[:id] # retrieve movie ID from URI route
+    @restaurant = Restaurant.find(@id) # look up restaurants by unique ID
+   
+      Review.create!(id: @id,user_name: params[:name],review: params[:description])
+       @reviews = Review.where(:restaurant => @id)
+     
       
       
   end
