@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-03T15:23:39+00:00">2015-12-03T15:23:39+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-03T19:41:48+00:00">2015-12-03T19:41:48+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.53
+         6.41
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>40</td>
         <td>37</td>
         <td>3</td>
-        <td>9.0</td>
+        <td>10.5</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.7</td>
       </tr>
       
       <tr>
@@ -143,7 +143,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.62
+         10.05
        </span>
     </span> hits/line)
   </h2>
@@ -185,7 +185,7 @@
         <td>40</td>
         <td>37</td>
         <td>3</td>
-        <td>9.0</td>
+        <td>10.5</td>
       </tr>
       
     </tbody>
@@ -200,7 +200,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.21
+         4.66
        </span>
     </span> hits/line)
   </h2>
@@ -242,7 +242,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.7</td>
       </tr>
       
       <tr>
@@ -304,7 +304,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.23
+         1.53
        </span>
     </span> hits/line)
   </h2>
@@ -346,7 +346,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.7</td>
       </tr>
       
     </tbody>
@@ -491,32 +491,32 @@
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="4">
+          <span class="hits">18</span>
           
           <code class="ruby">    ordering = {:title =&gt; :asc}</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="5">
+          <span class="hits">18</span>
           
           <code class="ruby">    @all_environments = Restaurant.all_environments</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="6">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="6">
+          <span class="hits">18</span>
           
           <code class="ruby">    @all_cuisines = Restaurant.all_cuisines</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="7">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="7">
+          <span class="hits">18</span>
           
           <code class="ruby">    @all_price_ranges = Restaurant.all_price_ranges</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="8">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="8">
+          <span class="hits">18</span>
           
           <code class="ruby">    @selected_ranges = params[:range]  || &quot;&quot;</code>
         </li>
@@ -527,26 +527,26 @@
           <code class="ruby">    #changed from {} to &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="10">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="10">
+          <span class="hits">18</span>
           
           <code class="ruby">    @selected_environments = params[:environments] || session[:environments] || {}</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="11">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="11">
+          <span class="hits">18</span>
           
           <code class="ruby">    @selected_cuisines = params[:cuisines] || session[:cuisines] || []</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="12">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="12">
+          <span class="hits">18</span>
           
           <code class="ruby">    if @selected_environments == {}</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="13">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="80" data-linenumber="13">
+          <span class="hits">80</span>
           
           <code class="ruby">      @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]</code>
         </li>
@@ -557,14 +557,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="15">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="15">
+          <span class="hits">18</span>
           
           <code class="ruby">    if @selected_cuisines == []</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="16">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="12" data-linenumber="16">
+          <span class="hits">12</span>
           
           <code class="ruby">      @selected_cuisines = @all_cuisines</code>
         </li>
@@ -575,14 +575,14 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="18">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="18">
+          <span class="hits">18</span>
           
           <code class="ruby">    if @selected_ranges == &quot;&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="19">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="19">
+          <span class="hits">10</span>
           
           <code class="ruby">      @selected_ranges = &quot;All&quot;</code>
         </li>
@@ -599,8 +599,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="22">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="22">
+          <span class="hits">18</span>
           
           <code class="ruby">    if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines] or params[:range] != session[:range]</code>
         </li>
@@ -665,14 +665,14 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="33">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="33">
+          <span class="hits">14</span>
           
           <code class="ruby">    @environments=[]</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="34">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="34">
+          <span class="hits">14</span>
           
           <code class="ruby">    @environments = Environment.select(:restaurant_id).where(:env_type =&gt; @selected_environments.keys)</code>
         </li>
@@ -689,8 +689,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="37">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="14" data-linenumber="37">
+          <span class="hits">14</span>
           
           <code class="ruby">    if @selected_ranges == &#39;$&#39;</code>
         </li>
@@ -701,8 +701,8 @@
           <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="39">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="13" data-linenumber="39">
+          <span class="hits">13</span>
           
           <code class="ruby">    elsif @selected_ranges == &#39;$$&#39;</code>
         </li>
@@ -713,8 +713,8 @@
           <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="41">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="13" data-linenumber="41">
+          <span class="hits">13</span>
           
           <code class="ruby">    elsif @selected_ranges == &#39;$$$&#39;</code>
         </li>
@@ -731,8 +731,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="44">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="13" data-linenumber="44">
+          <span class="hits">13</span>
           
           <code class="ruby">       @restaurants = Restaurant.where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
         </li>
@@ -773,14 +773,14 @@
           <code class="ruby">   </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="51">
+          <span class="hits">3</span>
           
           <code class="ruby">    @id = params[:id] # retrieve movie ID from URI route</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="52">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="52">
+          <span class="hits">3</span>
           
           <code class="ruby">    @restaurant = Restaurant.find(@id) # look up restaurants by unique ID</code>
         </li>
@@ -791,14 +791,14 @@
           <code class="ruby">   </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="54">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="54">
+          <span class="hits">3</span>
           
           <code class="ruby">      Review.create!(id: @id,user_name: params[:name],review: params[:description],restaurant: @id)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="55">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="55">
+          <span class="hits">3</span>
           
           <code class="ruby">       @reviews = Review.where(:restaurant =&gt; @id)</code>
         </li>
@@ -1001,8 +1001,8 @@
           <code class="ruby">    def url_with_protocol(url)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="3">
+          <span class="hits">3</span>
           
           <code class="ruby">       /^http/i.match(url) ? url : &quot;http://#{url}&quot;</code>
         </li>
@@ -1115,8 +1115,8 @@
           <code class="ruby">    def self.all_environments</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="5">
+          <span class="hits">18</span>
           
           <code class="ruby">        return %w(Outdoor\ sitting Casual Romantic Kid\ friendly Meet\ for\ a\ drink Group\ dining Nice\ view)</code>
         </li>
@@ -1133,8 +1133,8 @@
           <code class="ruby">    def self.all_cuisines</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="8">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="8">
+          <span class="hits">18</span>
           
           <code class="ruby">        return %w(Sushi Southern\ American Steakhouse Pizza American Tex-Mex Seafood Italian Asian)</code>
         </li>
@@ -1151,8 +1151,8 @@
           <code class="ruby">    def self.all_price_ranges</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="11">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="11">
+          <span class="hits">18</span>
           
           <code class="ruby">        return %w($ $$ $$$ All)</code>
         </li>

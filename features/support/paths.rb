@@ -19,6 +19,8 @@ module NavigationHelpers
     when /^the (RestaurantFinder )?detail\s?page$/ then '/admin/restaurant/7'
    
     when /^the movies page$/ then '/admin/restaurant'
+    
+    when /^RestaurantFinder home$/ then '/admin/restaurant'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

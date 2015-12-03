@@ -76,6 +76,14 @@ When(/^I fill "(.*?)" field with "(.*?)"$/) do |arg1, arg2|
   
 end
 
+Then(/^I should  be redirected to "(.*?)" page$/) do |arg1|
+  visit path_to(arg1)
+end
+
+Then /^(?:|I )should be redirected to (.+)$/ do |page_name|
+   visit path_to(page_name)
+end
+  
 
 When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case, cuisine_list|
   cuisine_list.split(/,\s*/).each do |cuisine| 
