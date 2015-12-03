@@ -51,6 +51,13 @@ Then /^I should (not )?see the following restaurants: (.*)$/ do |should_not_case
   end
 end
 
+Then /^I should (not )?see the following words: (.*)$/ do |should_not_case, word_list|
+  word_list.split(/,\s*/).each do |word|
+    step %Q{I should #{should_not_case}see "#{word}"}
+  end
+end
+  
+
 Then /^the following environment checkboxes should (not )?be checked: (.*)$/ do |should_not_case, environment_list|
   environment_list.split(/,\s*/).each do |environment|
     environment = "environments_#{environment}"
@@ -63,6 +70,12 @@ Then /^the following environment checkboxes should (not )?be checked: (.*)$/ do 
     end
   end
 end
+
+When(/^I fill "(.*?)" field with "(.*?)"$/) do |arg1, arg2|
+  fill_in arg1, :with => arg2
+  
+end
+
 
 When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case, cuisine_list|
   cuisine_list.split(/,\s*/).each do |cuisine| 
@@ -78,4 +91,8 @@ When /I (un)?select the following cuisine type options: (.*)/ do |unselect_case,
       # Capybara method
     end
   end
+end
+
+When /^(?:|I )click "([^"]*)"$/ do |link|
+ find("a").click(link)
 end

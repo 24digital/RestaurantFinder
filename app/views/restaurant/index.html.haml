@@ -32,8 +32,7 @@
   %tbody
     - @restaurants.each do |restaurant|
       %tr
-        %td= link_to restaurant.title, restaurant_path(restaurant)
-        %td= restaurant.cuisine
+        %td= link_to restaurant.title, restaurant_path(restaurant), :id => "#{restaurant.title}"
         %td= restaurant.price_range
     
         
