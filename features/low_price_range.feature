@@ -42,4 +42,3 @@ Scenario: restrict to restaurants with "Sushi" and "$" price option cuisine opti
   And I press "Search"
   Then I should see the following restaurants: Oriental Garden
   Then I should not see the following restaurants: Peninsula Grill, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, Xiao Bao Biscuit,EVO Pizzeria, Monza, La Pizzeria, McGrady
-

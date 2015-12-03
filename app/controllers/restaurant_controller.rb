@@ -67,7 +67,7 @@ class RestaurantController < ApplicationController
   end
   
   def create
-      redirect_to restaurant_index_path
+      #redirect_to restaurant_index_path
   end
   
   def destroy

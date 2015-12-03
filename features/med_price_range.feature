@@ -17,6 +17,8 @@ Background: restaurants have been added to database
   | 8  | Monza                   | Pizza             | $$         |
   | 9  | La Pizzeria             | Italian           | $          |
   | 10 | Xiao Bao Biscuit        | Asian             | $          |
+  | 11 | Trattoria Lucca         | Italian           | $$         |
+  | 12 | Wild Olive Cucina Italiana| Italian         | $$         |
   
   And the following environments exist:
   # we can switch between And and Given, it does not matter
@@ -35,11 +37,10 @@ Background: restaurants have been added to database
   | 9             | Casual             |
   | 10            | Casual             |     
 
-Scenario: restrict to restaurants with "Sushi" and "$" price option cuisine options
+Scenario: restrict to restaurants with "American" and "$$" price option cuisine options
   When I am on the RestaurantFinder home page
-  When I select the following cuisine type options: Sushi
-  When I check the following price range radio button: $
+  When I select the following cuisine type options: American
+  When I check the following price range radio button: $$
   And I press "Search"
-  Then I should see the following restaurants: Oriental Garden
-  Then I should not see the following restaurants: Peninsula Grill, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, Xiao Bao Biscuit,EVO Pizzeria, Monza, La Pizzeria, McGrady
-
+  Then I should see the following restaurants: McGrady
+  Then I should not see the following restaurants: Peninsula Grill, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, Xiao Bao Biscuit,EVO Pizzeria, Monza, La Pizzeria
