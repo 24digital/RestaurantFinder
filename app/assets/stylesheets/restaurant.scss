@@ -4,20 +4,18 @@
 
 @charset "UTF-8";
 table#review {
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: 2px solid black;
-  text: center;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	border-collapse: collapse;
+	text: center;
+	min-width: 80%;
+	margin-left: 0px;
 }
-table#review th {
-  border: 2px solid white;
-  font-weight: bold;
-  background-color: brown;
-}
-table#review th, table#movies td {
-  padding: 4px;
-  text-align: left;
+table th  {
+	border: 2px solid white;
+	font-weight: bold;
+	background-color: #B1B1B1;
 }
 body h1 {
 	color: #000000;
@@ -25,8 +23,7 @@ body h1 {
 	font-style: normal;
 	font-weight: 400;
 	text-align: center;
-	margin-bottom: 70px;
-	margin-top: 70px;
+	font-size: xx-large;
 }
 #search_form #cuisine {
 	text-align: left;
@@ -41,8 +38,7 @@ body h1 {
 	float: left;
 	display: table;
 }
-
-#restaurants {
+table {
 	text-align: left;
 	text-indent: 14px;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
@@ -53,7 +49,7 @@ body h1 {
 	vertical-align: baseline;
 	border-style: solid;
 	border-color: #595959;
-	max-width: 80%;
+	max-width: 85%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 72px;
@@ -68,25 +64,28 @@ a {
 	margin-left: 12px;
 	margin-right: 12px;
 	float: left;
+	font-size: medium;
 }
 #search_form #price_range {
 	margin-left: 12px;
 	margin-right: 12px;
 	float: left;
 	max-width: 80%;
+	font-size: medium;
 }
 #search_form #search_submit {
 	font-size: medium;
-	background-color: #D9D9D9;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px;
 	box-shadow: 0px 0px;
-	width: 123px;
+	width: 120px;
 	margin-top: 14px;
 	float: left;
 	margin-left: 12px;
 	margin-right: 12px;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #B1B1B1;
+	height: auto;
 }
 #search_form #environment div {
 	margin-bottom: 70px;
@@ -95,12 +94,10 @@ a {
 	float: left;
 }
 #search_form #cuisines {
-	font-size: small;
+	font-size: medium;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-}
-#search_form #environment span {
 }
 #search_form #cuisine div {
 	float: left;
@@ -109,10 +106,61 @@ a {
 }
 body {
 	background-color: #EBEBEB;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 #form_container {
 	padding-bottom: 100px;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1080px;
+}
+#submit_review {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: medium;
+}
+#submit_review input , #submit_review #description{
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: medium;
+	text-shadow: 0px 0px;
+}
+ul#details {
+	max-width: 95%;
+}
+#details_container {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: medium;
+}
+body h2 {
+	color: #000000;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: x-large;
+}
+#review_submit_button , #review_reset_button{
+	font-size: medium;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px;
+	box-shadow: 0px 0px;
+	width: 83px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #B1B1B1;
+	height: auto;
+	color: #000000;
+}
+#notice {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: medium;
+	text-align: center;
+	color: #D50001;
+	margin-top: 20px;
 }

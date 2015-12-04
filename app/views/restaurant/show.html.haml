@@ -2,26 +2,29 @@
 
 %h2 Details about #{@restaurant.title}
 -# = form_tag restaurant_index_path, :method => :get, :id => 'search_form' do
-%ul#details
-  %li
-    Phone:
-    =@restaurant.phone
-  %li
-    Website:
-    = link_to @restaurant.website, url_with_protocol(@restaurant.website), :target => '_blank'
+#details_container
+  %ul#details
+    %li
+      Phone:
+      =@restaurant.phone
+    %li
+      Website:
+      = link_to @restaurant.website, url_with_protocol(@restaurant.website), :target => '_blank'
+  
+  = link_to 'Back to restaurant list', restaurant_index_path, :id => "back"
 
-= link_to 'Back to restaurant list', restaurant_index_path, :id => "back"
-
+%br/
 %h2 Leave a review for  #{@restaurant.title}
 %form#submit_review{:method => "create", :name => "submit_review"}
   Name: 
   %br/  
   %input#name{:name => "name", :type => "text"}
+  %br/ 
   Description : 
   %br/ 
   %textarea#description{:cols => "50", :name => "description", :rows => "5"}
-  %input{:name => "submit", :type => "submit", :value => "Submit"}/
-  %input{:name => "reset", :type => "reset", :value => "Reset"}/
+  %input#review_submit_button{:name => "submit", :type => "submit", :value => "Submit"}/
+  %input#review_reset_button{:name => "reset", :type => "reset", :value => "Reset"}/
   
 
 %table#review
