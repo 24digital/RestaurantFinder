@@ -39,7 +39,7 @@ Background: restaurants have been added to database
   | 10            | Casual             |     
 
 Scenario: restrict to restaurants with "Sushi", "Pizza", "Italian", or "American" cuisine options
-  When I am on the RestaurantFinder home page
+  When I am on the home page
   When I select the following cuisine type options: Sushi, Pizza, Italian, American
   When I unselect the following cuisine type options: Southern American, Steakhouse, Tex-Mex, Seafood, Asian
   And I press "Search"
