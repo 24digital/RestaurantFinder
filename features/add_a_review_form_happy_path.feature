@@ -24,5 +24,5 @@ I want to add a form where I can leave a review for any restaurant
       When I fill "name" field with "Anna Sandifer"
       When I fill "description" field with "Great Food"
       And I press "Submit"
-      Then I should see "Details about Coast Bar and Grill Phone: Website: http:// Back to restaurant list Leave a review for Coast Bar and Grill Name: Description : Name Review Anna Sandifer Great Food"
+      Then I should see "Details about Coast Bar and Grill Address: Phone: Timings: Website: http:// Back to restaurant list Leave a review for Coast Bar and Grill Name: Description : Name Review Anna Sandifer Great Food"
      
