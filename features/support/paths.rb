@@ -17,7 +17,7 @@ module NavigationHelpers
       '/'
     when /^the (RestaurantFinder )?home\s?page$/ then '/admin/restaurant'
     when /^the (RestaurantFinder )?detail\s?page$/ then '/admin/restaurant/7'
-   
+    when /^the details page for "(.*)"$/ then '/admin/restaurant/1'
     when /^the movies page$/ then '/admin/restaurant'
     
     when /^RestaurantFinder home$/ then '/admin/restaurant'

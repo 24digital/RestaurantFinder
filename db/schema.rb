@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20151124213930) do
     t.string   "price_range"
     t.string   "website"
     t.string   "phone"
+    t.string   "address"
+    t.string   "timings"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
