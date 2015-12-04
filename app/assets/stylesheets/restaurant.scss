@@ -16,10 +16,14 @@ table th  {
 	border: 2px solid white;
 	font-weight: bold;
 	background-color: #B1B1B1;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+	padding-left: 4px;
 }
 body h1 {
 	color: #000000;
-	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	text-align: center;
@@ -28,7 +32,7 @@ body h1 {
 #search_form #cuisine {
 	text-align: left;
 	vertical-align: top;
-	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-weight: normal;
 	max-width: 40%;
 	margin-right: 12px;
@@ -41,7 +45,7 @@ body h1 {
 table {
 	text-align: left;
 	text-indent: 14px;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
@@ -55,6 +59,8 @@ table {
 	margin-top: 72px;
 	margin-bottom: 14px;
 	clear: both;
+	padding-left: 4px;
+	padding-right: 4px;
 }
 a {
 	color: #3A3A3A;
@@ -65,6 +71,7 @@ a {
 	margin-right: 12px;
 	float: left;
 	font-size: medium;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 #search_form #price_range {
 	margin-left: 12px;
@@ -72,6 +79,7 @@ a {
 	float: left;
 	max-width: 80%;
 	font-size: medium;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 #search_form #search_submit {
 	font-size: medium;
@@ -79,13 +87,14 @@ a {
 	-webkit-box-shadow: 0px 0px;
 	box-shadow: 0px 0px;
 	width: 120px;
-	margin-top: 14px;
 	float: left;
 	margin-left: 12px;
 	margin-right: 12px;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #B1B1B1;
 	height: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 #search_form #environment div {
 	margin-bottom: 70px;
@@ -98,11 +107,14 @@ a {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 #search_form #cuisine div {
 	float: left;
 	display: inherit;
 	margin-right: 2px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	margin-bottom: 2px;
 }
 body {
 	background-color: #EBEBEB;
@@ -114,15 +126,16 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1080px;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 #submit_review {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
 }
 #submit_review input , #submit_review #description{
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
@@ -132,14 +145,21 @@ ul#details {
 	max-width: 95%;
 }
 #details_container {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
 }
+#submit_review input {
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+#submit_review #description {
+	margin-top: 3px;
+}
 body h2 {
 	color: #000000;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: x-large;
@@ -156,11 +176,15 @@ body h2 {
 	color: #000000;
 }
 #notice {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: medium;
 	text-align: center;
 	color: #D50001;
 	margin-top: 20px;
+}
+#show {
+	margin-left: 10px;
+	margin-right: 10px;
 }
