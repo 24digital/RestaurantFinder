@@ -22,13 +22,15 @@ table th  {
 	padding-left: 4px;
 }
 body h1 {
-	color: #000000;
+	color: #e6e6e6;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	text-align: center;
-	font-size: xx-large;
+	font-size: 250%;
+
 }
+
 #search_form #cuisine {
 	text-align: left;
 	vertical-align: top;
@@ -41,6 +43,7 @@ body h1 {
 	padding-top: 0px;
 	float: left;
 	display: table;
+	
 }
 table {
 	text-align: left;
@@ -59,8 +62,13 @@ table {
 	margin-top: 72px;
 	margin-bottom: 14px;
 	clear: both;
+	opacity: 0.7;
 	padding-left: 4px;
 	padding-right: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #b3b3b3;
+	border-radius: 25px;
 }
 a {
 	color: #3A3A3A;
@@ -72,6 +80,7 @@ a {
 	float: left;
 	font-size: medium;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	
 }
 #search_form #price_range {
 	margin-left: 12px;
@@ -80,6 +89,7 @@ a {
 	max-width: 80%;
 	font-size: medium;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	
 }
 #search_form #search_submit {
 	font-size: medium;
@@ -101,6 +111,7 @@ a {
 	margin-right: 8px;
 	display: block;
 	float: left;
+	
 }
 #search_form #cuisines {
 	font-size: medium;
@@ -109,30 +120,51 @@ a {
 	margin-right: auto;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
+
+
 #search_form #cuisine div {
 	float: left;
 	display: inherit;
 	margin-right: 2px;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	margin-bottom: 2px;
+	
 }
 body {
 	background-color: #EBEBEB;
 	padding-left: 5px;
 	padding-right: 5px;
+    background-image: url("http://www.relax-kovacica.com/en/restoran/images/bg/desk_restaurant_wine_glasses_plates_flowers_roses_80713_1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: auto; 
+    background-position: center;
+    height: 100%;
 }
 #form_container {
-	padding-bottom: 100px;
+	padding-bottom: 150px;
+	padding-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1080px;
+	opacity: 0.7;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #b3b3b3;
+	border: 6px;
+    border-radius: 25px;
 }
 #submit_review {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	opacity: 0.7;
+	background-color: #b3b3b3;
+	border: 6px;
+    border-radius: 25px;
 }
 #submit_review input , #submit_review #description{
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
@@ -143,12 +175,19 @@ body {
 }
 ul#details {
 	max-width: 95%;
+	background-color: #b3b3b3;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	opacity: 0.7;
+	border: 6px;
+    border-radius: 25px;
 }
 #details_container {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: medium;
+	
 }
 #submit_review input {
 	margin-bottom: 5px;
@@ -158,11 +197,12 @@ ul#details {
 	margin-top: 3px;
 }
 body h2 {
-	color: #000000;
+	color: #e6e6e6;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: x-large;
+
 }
 #review_submit_button , #review_reset_button{
 	font-size: medium;
@@ -175,6 +215,15 @@ body h2 {
 	height: auto;
 	color: #000000;
 }
+
+#back{
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-weight: bold;
+	font-size: medium;
+	color: #e6e6e6;
+}
+
+
 #notice {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	font-style: normal;
