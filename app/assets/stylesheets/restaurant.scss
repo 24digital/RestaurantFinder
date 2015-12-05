@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 @charset "UTF-8";
 table#review {
 	margin-top: 10px;
@@ -68,10 +69,6 @@ table {
 	padding-bottom: 5px;
 	background-color: #b3b3b3;
 	border-radius: 25px;
-}
-a {
-	color: #333333;
-	text-decoration: underline;
 }
 #search_form #environment {
 	max-width: 40%;
@@ -237,5 +234,25 @@ body h2 {
 #show {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+/* unvisited link */
+a:link {
+	color: #4F0000;
+	text-decoration: none;
+}
+a:visited {
+	color: #4F0000;
+	text-decoration: underline;
+}
+/* mouse over link */
+a:hover {
+	color: #4F0000;
+	text-decoration: underline;
+	text-shadow: 0px 0px 40px;
+}
+a:active {
+	color: #4F0000;
+	text-decoration: underline;
+	text-shadow: 0px 0px 40px;
 }
 
