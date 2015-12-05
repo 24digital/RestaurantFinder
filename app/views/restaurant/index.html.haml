@@ -21,8 +21,8 @@
         - @all_environments.each do |environment|
           = check_box_tag "environments[#{environment}]", 1, @selected_environments.include?(environment), :id => "environments_#{environment}"
           = environment
-    
-        = submit_tag 'Search', :id => 'search_submit'
+          
+    = submit_tag 'Search', :id => 'search_submit'
 %p
 %table#restaurants
   %thead

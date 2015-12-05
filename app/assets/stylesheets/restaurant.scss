@@ -86,29 +86,24 @@ table {
 	max-width: 80%;
 	font-size: medium;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	
+	margin-bottom: 5px;
 }
 #search_form #search_submit {
 	font-size: medium;
 	border-radius: 5px;
-	-webkit-box-shadow: 0px 0px;
-	box-shadow: 0px 0px;
 	width: 120px;
-	float: left;
-	margin-left: 12px;
-	margin-right: 12px;
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #B1B1B1;
-	height: auto;
-	margin-top: 12px;
-	margin-bottom: 12px;
+	display: block;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
 }
 #search_form #environment div {
-	margin-bottom: 70px;
 	margin-right: 8px;
 	display: block;
 	float: left;
-	
+	margin-bottom: 50px;
 }
 #search_form #cuisines {
 	font-size: medium;
@@ -139,7 +134,7 @@ body {
 	min-width: 533px;
 }
 #form_container {
-	padding-bottom: 150px;
+	padding-bottom: 30px;
 	padding-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
@@ -148,7 +143,7 @@ body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #b3b3b3;
 	border: 6px;
-    border-radius: 25px;
+	border-radius: 25px;
 }
 #submit_review {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
