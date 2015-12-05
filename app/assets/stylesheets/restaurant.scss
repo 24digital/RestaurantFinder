@@ -7,28 +7,27 @@ table#review {
 	margin-top: 10px;
 	margin-right: auto;
 	margin-bottom: 10px;
-	border-collapse: collapse;
 	text: center;
-	min-width: 80%;
 	margin-left: 0px;
+	min-width: 100%;
 }
 table th  {
-	border: 2px solid white;
 	font-weight: bold;
 	background-color: #B1B1B1;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-right: 4px;
 	padding-left: 4px;
+	border: 2px solid #FFFFFF;
+	border-radius: 25px;
 }
 body h1 {
 	color: #e6e6e6;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-family: allura;
 	font-style: normal;
 	font-weight: 400;
 	text-align: center;
-	font-size: 250%;
-
+	font-size: 58px;
 }
 
 #search_form #cuisine {
@@ -71,7 +70,8 @@ table {
 	border-radius: 25px;
 }
 a {
-	color: #3A3A3A;
+	color: #333333;
+	text-decoration: underline;
 }
 #search_form #environment {
 	max-width: 40%;
@@ -134,11 +134,12 @@ body {
 	background-color: #EBEBEB;
 	padding-left: 5px;
 	padding-right: 5px;
-    background-image: url("http://www.relax-kovacica.com/en/restoran/images/bg/desk_restaurant_wine_glasses_plates_flowers_roses_80713_1920x1080.jpg");
-    background-repeat: no-repeat;
-    background-size: auto; 
-    background-position: center;
-    height: 100%;
+	background-image: url("http://www.relax-kovacica.com/en/restoran/images/bg/desk_restaurant_wine_glasses_plates_flowers_roses_80713_1920x1080.jpg");
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	height: 100%;
+	min-width: 533px;
 }
 #form_container {
 	padding-bottom: 150px;
@@ -237,3 +238,4 @@ body h2 {
 	margin-left: 10px;
 	margin-right: 10px;
 }
+
