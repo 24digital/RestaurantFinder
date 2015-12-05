@@ -23,13 +23,17 @@
   Name: 
   %br/  
   %input#name{:name => "name", :type => "text"}
+  %br/ 
   Description : 
   %br/ 
   %textarea#description{:cols => "50", :name => "description", :rows => "5"}
-  %input{:name => "submit", :type => "submit", :value => "Submit"}/
-  %input{:name => "reset", :type => "reset", :value => "Reset"}/
+  %br/ 
+  %br/ 
+  %input#review_submit_button{:name => "submit", :type => "submit", :value => "Submit"}/
+  %input#review_reset_button{:name => "reset", :type => "reset", :value => "Reset"}/
+  %br/ 
   
-
+%br/ 
 %table#review
   %thead
     %tr
