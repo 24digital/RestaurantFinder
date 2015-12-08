@@ -8,10 +8,6 @@ class RestaurantController < ApplicationController
     @selected_ranges = params[:range]  || session[:rage] || ""
     #changed from {} to ""
     @selected_environments = params[:environments] || session[:environments] || {}
-    puts "---------------------------------------------------------------------"
-    puts @selected_environments
-    puts "---------------------------------------------------------------------"
-    
     @selected_cuisines = params[:cuisines] || session[:cuisines] || []
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
