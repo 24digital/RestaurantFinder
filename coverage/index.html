@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-07T18:09:31+00:00">2015-12-07T18:09:31+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-08T18:26:48+00:00">2015-12-08T18:26:48+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.12
+         1.41
        </span>
     </span> hits/line)
   </h2>
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#f243c7dad05366500a116e875aa2f7ce6969eb97" class="src_link" title="app/controllers/restaurant_controller.rb">app/controllers/restaurant_controller.rb</a></td>
         <td class="yellow strong">82.0 %</td>
-        <td>90</td>
+        <td>91</td>
         <td>50</td>
         <td>41</td>
         <td>9</td>
-        <td>1.5</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -143,7 +143,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         1.87
        </span>
     </span> hits/line)
   </h2>
@@ -181,11 +181,11 @@
       <tr>
         <td class="strong"><a href="#f243c7dad05366500a116e875aa2f7ce6969eb97" class="src_link" title="app/controllers/restaurant_controller.rb">app/controllers/restaurant_controller.rb</a></td>
         <td class="yellow strong">82.0 %</td>
-        <td>90</td>
+        <td>91</td>
         <td>50</td>
         <td>41</td>
         <td>9</td>
-        <td>1.5</td>
+        <td>1.9</td>
       </tr>
       
     </tbody>
@@ -200,7 +200,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.26
+         1.64
        </span>
     </span> hits/line)
   </h2>
@@ -242,7 +242,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -518,7 +518,7 @@
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">    @selected_ranges = params[:range]  || &quot;&quot;</code>
+          <code class="ruby">    @selected_ranges = params[:range]  || session[:rage] || &quot;&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -536,478 +536,484 @@
         <li class="covered" data-hits="2" data-linenumber="11">
           <span class="hits">2</span>
           
-          <code class="ruby">    @selected_cuisines = params[:cuisines] || session[:cuisines] || []</code>
+          <code class="ruby">    puts &quot;---------------------------------------------------------------------&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="12">
           <span class="hits">2</span>
           
-          <code class="ruby">    if @selected_environments == {}</code>
+          <code class="ruby">    puts @selected_environments</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="13">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
           
-          <code class="ruby">      @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]</code>
+          <code class="ruby">    puts &quot;---------------------------------------------------------------------&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">    if @selected_cuisines == []</code>
+          <code class="ruby">    @selected_cuisines = params[:cuisines] || session[:cuisines] || []</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
-          <code class="ruby">      @selected_cuisines = @all_cuisines</code>
+          <code class="ruby">    if @selected_environments == {}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="16" data-linenumber="17">
+          <span class="hits">16</span>
+          
+          <code class="ruby">      @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    if @selected_ranges == &quot;&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="19">
           <span class="hits">2</span>
           
-          <code class="ruby">      @selected_ranges = &quot;All&quot;</code>
+          <code class="ruby">    if @selected_cuisines == []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      @selected_cuisines = @all_cuisines</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
-          <code class="ruby">    if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines] or params[:range] != session[:range]</code>
+          <code class="ruby">    if @selected_ranges == &quot;&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="2" data-linenumber="23">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">      session[:environments] = @selected_environments</code>
+          <code class="ruby">      @selected_ranges = &quot;All&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
-          
-          <code class="ruby">      session[:cuisines] = @selected_cuisines</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
-          
-          <code class="ruby">      session[:range] = @selected_ranges</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
-          
-          <code class="ruby">      redirect_to :environments =&gt; @selected_environments, :cuisines =&gt; @selected_cuisines, :range =&gt; @selected_ranges and return</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">    #@restaurants = Restaurant.order(ordering)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">    #logger.debug &quot;--------------------------&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">    #logger.debug @selected_environments</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="33">
+        <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
-          <code class="ruby">    @environments=[]</code>
+          <code class="ruby">    if params[:environments] != session[:environments] or params[:cuisines] != session[:cuisines] or params[:range] != session[:range]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="34">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="27">
           
-          <code class="ruby">    @environments = Environment.select(:restaurant_id).where(:env_type =&gt; @selected_environments.keys)</code>
+          
+          <code class="ruby">      session[:environments] = @selected_environments</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">    #@restaurants = Restaurant.where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
+          <code class="ruby">      session[:cuisines] = @selected_cuisines</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      session[:range] = @selected_ranges</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="30">
           
-          <code class="ruby">    if @selected_ranges == &#39;$&#39;</code>
+          
+          <code class="ruby">      redirect_to :environments =&gt; @selected_environments, :cuisines =&gt; @selected_cuisines, :range =&gt; @selected_ranges and return</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
-          
-          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="39">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    elsif @selected_ranges == &#39;$$&#39;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
-          
-          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="41">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    elsif @selected_ranges == &#39;$$$&#39;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$$$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="44">
-          <span class="hits">2</span>
-          
-          <code class="ruby">       @restaurants = Restaurant.where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby"> </code>
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">    #@restaurants = Restaurant.order(ordering)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">    #logger.debug &quot;--------------------------&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    #logger.debug @selected_environments</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @environments=[]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @environments = Environment.select(:restaurant_id).where(:env_type =&gt; @selected_environments.keys)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">    #@restaurants = Restaurant.where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="41">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if @selected_ranges == &#39;$&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
+          
+          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="43">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    elsif @selected_ranges == &#39;$$&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="45">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    elsif @selected_ranges == &#39;$$$&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
+          
+          <code class="ruby">      @restaurants = Restaurant.where(:price_range =&gt; &#39;$$$&#39;).where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="2" data-linenumber="48">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  </code>
+          <code class="ruby">       @restaurants = Restaurant.where(:cuisine =&gt; @selected_cuisines).where(:id =&gt; @environments).order(ordering)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="49">
           
-          <code class="ruby">  def show</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
+          <code class="ruby"> </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
           <code class="ruby">   </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">    @id = params[:id] # retrieve movie ID from URI route</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
           <code class="ruby">    @restaurant = Restaurant.find(@id) # look up restaurants by unique ID</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">   </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
           <code class="ruby">   if (params[:name]==&quot;&quot; || params[:description] == &quot;&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
           <code class="ruby">     flash[:notice] = &quot;Please fill in name and review fields &quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="60">
           
           
           <code class="ruby">     @reviews = Review.where(:restaurant =&gt; @id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">   else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">    Review.create!(id: @id,user_name: params[:name],review: params[:description],restaurant: @id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
           <code class="ruby">    @reviews = Review.where(:restaurant =&gt; @id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">      </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def reset</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="65">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    params[:range] = &quot;&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="66">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    session[:range] = &quot;&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    params[:environments] = {}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="68">
           <span class="hits">1</span>
           
-          <code class="ruby">    session[:environments] = {}</code>
+          <code class="ruby">  def reset</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="69">
+          <span class="hits">2</span>
           
-          <code class="ruby">    params[:cuisines] = []</code>
+          <code class="ruby">    session[:range] = params[:range] = &quot;All&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="16" data-linenumber="70">
+          <span class="hits">16</span>
           
-          <code class="ruby">    session[:cuisines] = []</code>
+          <code class="ruby">    session[:environments] = params[:environments] = Hash[Restaurant.all_environments.map {|environment| [environment, environment]}]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="71">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    session[:cuisines] = params[:cuisines] = Restaurant.all_cuisines</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="72">
+          <span class="hits">2</span>
           
           <code class="ruby">    redirect_to root_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
-          <code class="ruby">  end </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
+          <code class="ruby">  end </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="75">
           <span class="hits">1</span>
           
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">      #redirect_to restaurant_index_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
+        <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby">end</code>
@@ -1187,8 +1193,8 @@
           <code class="ruby">    def self.all_environments</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">        return %w(Outdoor\ sitting Casual Romantic Kid\ friendly Meet\ for\ a\ drink Group\ dining Nice\ view)</code>
         </li>
@@ -1205,8 +1211,8 @@
           <code class="ruby">    def self.all_cuisines</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="8">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">        return %w(Sushi Southern\ American Steakhouse Pizza American Tex-Mex Seafood Italian Asian)</code>
         </li>

@@ -5,9 +5,13 @@ class RestaurantController < ApplicationController
     @all_environments = Restaurant.all_environments
     @all_cuisines = Restaurant.all_cuisines
     @all_price_ranges = Restaurant.all_price_ranges
-    @selected_ranges = params[:range]  || ""
+    @selected_ranges = params[:range]  || session[:rage] || ""
     #changed from {} to ""
     @selected_environments = params[:environments] || session[:environments] || {}
+    puts "---------------------------------------------------------------------"
+    puts @selected_environments
+    puts "---------------------------------------------------------------------"
+    
     @selected_cuisines = params[:cuisines] || session[:cuisines] || []
     if @selected_environments == {}
       @selected_environments = Hash[@all_environments.map {|environment| [environment, environment]}]
@@ -62,12 +66,9 @@ class RestaurantController < ApplicationController
   end
   
   def reset
-    params[:range] = ""
-    session[:range] = ""
-    params[:environments] = {}
-    session[:environments] = {}
-    params[:cuisines] = []
-    session[:cuisines] = []
+    session[:range] = params[:range] = "All"
+    session[:environments] = params[:environments] = Hash[Restaurant.all_environments.map {|environment| [environment, environment]}]
+    session[:cuisines] = params[:cuisines] = Restaurant.all_cuisines
     redirect_to root_path
   end 
   
