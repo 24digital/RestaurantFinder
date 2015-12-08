@@ -45,5 +45,6 @@ Scenario: restrict to restaurants with "Sushi", "Pizza", "Italian", or "American
   And I press "Search"
   Then I should see the following restaurants: Oriental Garden, EVO Pizzeria, Monza, La Pizzeria, McGrady
   Then I should not see the following restaurants: Peninsula Grill, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, Xiao Bao Biscuit
-  
-  
+  And I press "Reset"
+  Then I should see the following restaurants: Oriental Garden, EVO Pizzeria, Monza, La Pizzeria, McGrady,Peninsula Grill, Halls Chophouse, Red Drum Restaurant, Coast Bar and Grill, Xiao Bao Biscuit
+ 
