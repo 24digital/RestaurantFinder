@@ -138,7 +138,11 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1449604743
+=======
+    "timestamp": 1449332037
+>>>>>>> e6efabab4565b04d2fe0f016f6fe3e89024a116b
   },
   "RSpec": {
     "coverage": {
@@ -279,6 +283,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1449604723
+=======
+    "timestamp": 1449244356
+>>>>>>> e6efabab4565b04d2fe0f016f6fe3e89024a116b
   }
 }
