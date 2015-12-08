@@ -3,6 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Place all the styles related to the restaurant controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 @charset "UTF-8";
 table#review {
 	margin-top: 10px;
@@ -88,7 +108,7 @@ table {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	margin-bottom: 5px;
 }
-#search_form #search_submit {
+#search_form #search_submit, #reset_button {
 	font-size: medium;
 	border-radius: 5px;
 	width: 120px;
@@ -134,7 +154,7 @@ body {
 	min-width: 533px;
 }
 #form_container {
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	padding-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
@@ -250,3 +270,7 @@ a:active {
 	text-decoration: underline;
 	text-shadow: 0px 0px 40px;
 }
+#search_form #search_submit {
+	margin-bottom: 6px;
+}
+

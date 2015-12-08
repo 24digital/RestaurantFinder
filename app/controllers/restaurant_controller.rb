@@ -58,10 +58,18 @@ class RestaurantController < ApplicationController
     Review.create!(id: @id,user_name: params[:name],review: params[:description],restaurant: @id)
     @reviews = Review.where(:restaurant => @id)
    end
-     
-      
       
   end
+  
+  def reset
+    params[:range] = ""
+    session[:range] = ""
+    params[:environments] = {}
+    session[:environments] = {}
+    params[:cuisines] = []
+    session[:cuisines] = []
+    redirect_to root_path
+  end 
   
   def new
   end

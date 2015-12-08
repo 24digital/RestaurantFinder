@@ -23,6 +23,7 @@
           = environment
           
     = submit_tag 'Search', :id => 'search_submit'
+  = button_to "Reset", {action: "reset"}, {id: 'reset_button'}
 %p
 %table#restaurants
   %thead

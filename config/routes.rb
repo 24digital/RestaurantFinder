@@ -4,6 +4,7 @@ RestaurantFinder::Application.routes.draw do
   #root :to => redirect('/restaurant')
   root 'restaurant#index'
   post '/admin/restaurant/' =>'restaurant#show'
+  post '/admin/restaurant/reset' => 'restaurant#reset'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
